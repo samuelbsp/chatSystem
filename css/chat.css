@@ -1,0 +1,305 @@
+body{
+    height:100%;
+    width:100%;
+}
+#loginPage{
+    position:absolute;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:white;
+    display:block;
+    z-index:100;
+}
+#loginForm{
+    width:40%;
+    left:30%;
+    top:15%;
+    position:relative;
+}
+#loginForm input{
+    width:100%;
+    padding:10px 5px;
+    margin:5px 0;
+}
+.titreLogin{
+    width:100%;
+    text-align:center;
+    color:black;
+    padding-top:150px;
+}
+.version{
+    color:black;
+    width:100%;
+    text-align:center;
+    margin-top:20%;
+}
+.blueButton1{
+    width:50%!important;
+    margin-left:27%!important;
+}
+#chatErrorMessage{
+    position:absolute;
+    z-index:150;
+    color:red;
+    top:10px;
+    width:100%;
+    text-align:center;
+    font-size:1.5em;
+}
+/* Conteneur chat principal */
+
+#chatContainer{
+    width:79%;
+    height:100%;
+    float:left;
+}
+
+/* Barre du haut */
+
+#chatTopBar{
+    height:20px;
+    background-color:rgba(255,255,255,0.9);
+    padding:10px 0 10px 0;
+    color:#777;
+    text-shadow:1px 1px 0 #FFFFFF;
+    border-radius:5px;
+}
+
+#chatTopBar .name{
+    margin-left:2%;
+    font-weight:bold;
+}
+
+#chatTopBar img{
+    margin-left:2%;
+    float:left;
+    border-radius:50px;
+}
+.logoutButton{
+    float:right;
+    padding:0 2% 0 0;
+    text-decoration:none;
+    border:0px;
+    color:gray!important;
+}
+
+/* Chats */
+.noChats{
+    padding:15px 2%;
+}
+#chatLineHolder{
+    min-height:500px;
+    height:100%;
+    width:100%;
+    margin-bottom:20px;
+    overflow:hidden;
+}
+
+.chat{
+    padding:10px 10% 10px 0;
+    color:white; 
+    position:relative;
+    width:90%;
+    position:relative;
+    border-bottom:1px solid rgba(255,255,255,0.3);
+    overflow:hidden;
+}
+.chat .gravatar{
+    background:url('http://www.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?size=23') no-repeat;
+    height:100%;
+    width:50px;
+    height:50px;
+    float:left;
+    margin:0 5% 0 2%;
+    border-radius:50px;
+}
+.chat .gravatar img{
+    width:50px;
+    height:50px;
+    visibility:hidden;
+    border-radius:50px;
+}
+.chat .author{
+    float:left;
+    margin-right:10px;
+    font-weight:bold;
+    font-size:1.4em;
+}
+.chat .text{
+    width:100%;
+    font-size:1.2em;
+    display:block;
+}
+.chat .text p{
+    width:84%;
+    height:100%;
+    overflow:hidden;
+    float:left;
+    word-wrap: break-word;
+    margin-top:3px;
+}
+.chat .time{
+    float:left;
+    font-size:0.9em;
+    margin-top:9px;
+    margin-left:12.5%;
+    width:80%;
+}
+
+.chat:last-child{
+    margin-bottom:0;
+}
+
+.chat img{
+    visibility:hidden;
+    margin:0;
+}
+/* Zone utilisateur du chat */
+
+#chatUsers{
+    background-color:#202020;
+    border:1px solid #111111;
+    height:100%;
+    min-height:620px;
+    width:20%;
+    float:left;
+    position:relative;
+    border-radius:5px;
+}
+
+#chatUsers .user{
+    background:url('http://www.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?size=30') no-repeat 1px 1px #444444;
+    border:1px solid #111111;
+    float:left;
+    height:32px;
+    margin:10px 0 0 10px;
+    width:32px;
+
+}
+.count{
+    position:absolute;
+    width:100%;
+    text-align:center;
+    padding:10px 0 5px 0;
+    bottom:10px;
+    border-top:1px solid rgba(255,255,255,0.4);
+}
+
+#chatUsers .user img{
+    border:1px solid #444444;
+    display:block;
+    visibility:hidden;
+}
+
+/* Barre du bas */
+
+#chatBottomBar{
+    padding:10px;
+    border:1px solid rgba(255,255,255,0.5);
+    border-radius:5px;
+    overflow:hidden;
+}
+
+#chatBottomBar .tip{
+    position:absolute;
+    width:0;
+    height:0;
+    border:10px solid transparent;
+    border-bottom-color:#eeeeee;
+    top:-20px;
+    left:20px;
+}
+#chatText{
+    width:76%;
+    padding:10px 2%;
+    border-radius:5px;
+    float:left;
+    opacity:0.7;
+    -webkit-transition:all 0.5s ease-in-out;
+    -moz-transition:all 0.5s ease-in-out;
+    -o-transition:all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease;  
+    transition:all 0.5s ease-i
+}
+#chatText:focus{
+    opacity:1;
+    -webkit-transition:all 0.5s ease-in-out;
+    -moz-transition:all 0.5s ease-in-out;
+    -o-transition:all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease;  
+    transition:all 0.5s ease-i
+}
+#submitForm{
+    display:none;
+}
+/* Modifie le style de JScrollPane */
+
+.jspVerticalBar{
+    background:none;
+    width:20px;
+}
+.jspHorizontalBar{
+    display:none;
+    height:0px;
+}
+.jspTrack{
+    background-color:#202020;
+    border:1px solid #111111;
+    width:3px;
+    right:-10px;
+}
+
+.jspDrag {
+    background:url('../img/slider.png') no-repeat;
+    width:20px;
+    left:-9px;
+    height:20px !important;
+    margin-top:-5px;
+}
+
+.jspDrag:hover{
+    background-position:left bottom;
+}
+
+/* Style additionnel */
+.buttonSend{
+    float:left;
+    background-color:white;
+    width:15%;
+    height:20px;
+    border:0px;
+    border-radius:5px;
+    margin-right:3%;
+    opacity:0.8;
+    -webkit-transition:all 0.5s ease-in-out;
+    -moz-transition:all 0.5s ease-in-out;
+    -o-transition:all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease;  
+    transition:all 0.5s ease-in-out;
+}
+.buttonSend:hover{
+    opacity:1;
+    -webkit-transition:all 0.5s ease-in-out;
+    -moz-transition:all 0.5s ease-in-out;
+    -o-transition:all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease;  
+    transition:all 0.5s ease-in-out;
+}
+#chatContainer .blueButton{
+    border:none !important;
+    color:#516D7F !important;
+    display:inline-block;
+    font-size:13px;
+    height:35px;
+    width:100%;
+    text-align:center;
+    margin:0;
+    cursor:pointer;
+    float:left;
+    border-radius:5px;
+}
+
+#chatContainer .blueButton:hover{
+    background-position:left bottom;
+}

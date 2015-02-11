@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+
+<link rel="stylesheet" type="text/css" href="js/jScrollPane/jScrollPane.css" />
+<link rel="stylesheet" type="text/css" href="css/page.css" />
+<link rel="stylesheet" type="text/css" href="css/chat.css" />
+
+</head>
+
+<body>
+<div id="loginPage">
+    <h2 class='titreLogin'>FOU MESSENGER DE FEU</h2>
+    <form id="loginForm" method="post" action="">
+    <input id="name" name="name" class="rounded" maxlength="16" />
+    <input id="email" name="email" class="rounded" />
+    <input type="submit" class="blueButton1" value="Login" />
+    </form>
+    <p class='version'>Version BETA 1.0</p>
+</div>
+<div id="chatContainer">
+
+    <div id="chatTopBar" class="rounded"></div>
+    <div id="chatLineHolder"></div>
+
+    <div id="chatBottomBar" class="rounded">
+        <div class="tip"></div>
+
+        <form id="submitForm" method="post" action="">
+            <div class="buttonSend">
+                <input type="submit" class="blueButton" value="Envoyer" />
+            </div>
+            <input id="chatText" name="chatText" class="rounded" maxlength="255" />
+        </form>
+
+    </div>
+
+</div>
+<div id="chatUsers" class="rounded">
+    
+
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="js/jScrollPane/jquery.mousewheel.js"></script>
+<script src="js/jScrollPane/jScrollPane.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/script2.js"></script>
+</body>
+</html>
